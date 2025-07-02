@@ -1,8 +1,10 @@
 import { useState } from "react";
-import "./App.css";
+// import "./App.css";
 import Skill from "./Skill";
 import Radio from "./Radio";
 import Dropdown from "./Dropdown";
+import LoopJSXMap from "./LoopJSXMap";
+import ReuseComponent from "./ReuseComponent";
 
 function App() {
   const [name, setName] = useState("");
@@ -57,6 +59,9 @@ function App() {
         <h3>{pass}</h3>
         <h3>{email}</h3>
       </form>
+
+      <LoopJSXMap />
+      <ReuseComponent />
     </>
   );
 }

@@ -5,6 +5,7 @@ import CollegeArr from "./CollegeArr";
 import Student from "./Student";
 import AdvanceProps from "./AdvanceProps";
 import AdvanceProps2 from "./AdvanceProps2";
+import ButtonTwo from "./ButtonTwo";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -57,6 +58,7 @@ function App() {
       <AdvanceProps2>
         <h1>Advance Portion</h1>
       </AdvanceProps2>
+      <ButtonTwo />
     </>
   );
 }

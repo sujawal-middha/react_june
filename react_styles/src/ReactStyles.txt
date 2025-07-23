@@ -1,0 +1,88 @@
+# How many types of style we have in react JS?
+total 5 types and we can use all them in single code:
+1. Inline style - use the style attribute directly on your elements-
+example: <div style={{color:'blue', fontSize: '16px'}}Hello World!</div>
+
+2. External style - Make separate file for css.
+- And import to Components
+example: 
+/* styles.css */
+.container {
+  background-color: lightgray;
+  padding: 20px
+}
+
+3. CSS Module - Similar to External CSS files.
+- But ensures that styles are locally scoped to a specific Component.
+example: 
+/* MyComponent.module.css */
+.container {
+  background-color: black;
+  padding: 20px
+}
+
+4. Styled Components:- In React, styles-Components is a Library that allows you to write CSS directly within your JavaScript Components.
+- This approach is known as CSS-in-JS
+example: 
+import styled from 'styled-components'
+
+const Button = styled.Button `
+  background-color: ${props => props.primary ? 'blue' : 'grey' };
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  `;
+
+5. External CSS Library/Framework/Utility-First Libraries :
+  1. Material-UI
+  2. React Bootstrap
+  3. Tailwind CSS etc
+
+Q1. How to react inline style different from regular inline style?
+so we have two divs:
+regular inline style: <div style='color:blue; background-color: red;'>This is a div with inline styles</div> 
+
+react inline style: <div style={{color:blue, backgroundColor: red}}>React JS style</div>
+Note: hm react {{}} double braces isliye use krte he bcz react to jsx me styles bhi object ki form me chahiye hoti he toh is treh se braces use krte he!
+
+//-- Problem with the use of external CSS in react js like for example we have import css in one component and in the same component we have passed data to child/parent then the css should also got applied there which is wrong. so the solution of this problem is passing CSS with the help of modules -
+
+//----CSS Module in React js
+- extension should be filename.module.css
+- but one precaution here never use css module globaly instead of used it for 2-3 or many more components in which you want to used.
+
+//Styled Components in React - 
+- difference of styled components and simple way of using styles in react is like when we need to apply css to more than one h1 then we need to write that code again & again. which makes it bit complex. so insted of it use style and add css for one time then use it anytime on the page;. ex:
+import styled from "styled-components";
+
+const Heading = styled.h1`
+  color: red;
+  border: 1px solid green;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+`;
+
+//! one more way to style the content-
+
+const Heading = styled.h1 ({
+  color: 'red',
+  border: '1px solid green',
+  borderRadius: '5px',
+  margin: '20px',
+  padding: '20px'
+})
+
+function ReactStyledComp() {
+  return (
+    <div>
+      ReactStyledComp
+      <Heading>Hello heading</Heading>
+      <Heading>Hello heading</Heading>
+      <Heading>Hello heading</Heading>
+      <Heading>Hello heading</Heading>
+    </div>
+  );
+}
+
+

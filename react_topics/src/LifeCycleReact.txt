@@ -1,0 +1,44 @@
+Important for Interview Questions:
+
+ Handling Dependency of useEffect function:
+ useEffect(()=>{
+ call every time
+ })
+
+ useEffect(()=>{
+ call only once
+ },[])
+
+ useEffect(()=>{
+ call on changing single state
+ },[state1])
+
+ useEffect(()=>{
+ call on changing both state
+ },[state1, state2])
+
+ useEffect(()=>{
+ call on changing props
+ },[prop1, prop2])
+
+
+Life Cycle in ReactJS
+
+useEffect(()=>{
+  //This Code will run on mount
+},[])
+
+useEffect(()=>{
+  //This Code will run on mount
+},[state or props])
+
+useEffect(()=>{
+  
+  return () => {
+    //This code will run on mount
+  }
+},[])
+
+useEffect(()=>{
+  //This Code will run on every life cycle event
+},[])

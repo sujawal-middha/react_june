@@ -1,0 +1,23 @@
+.heading {
+  color: red;
+}
+
+.avatar {
+  width: 200px;
+}
+
+.main {
+  width: 200px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 3px 1px #ddd;
+  margin: 10px;
+}
+
+.text-wrap {
+  padding: 10px;
+}
+
+.head-div {
+  display: flex;
+  flex-wrap: wrap;
+}
